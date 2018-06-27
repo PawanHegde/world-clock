@@ -26,7 +26,7 @@
   "lint-staged": {
     "*.js": [
       "prettier --write",
-      "eslint --fix",
+      "eslint --fix --max-warnings=0",
       "git add"
     ],
     "*.{json, css, md, less, scss}": [
@@ -37,11 +37,10 @@
   "eslintConfig": {
     "extends": [
       "eslint:recommended",
-      "plugin:react/recommended"
+      "react-app"
     ],
     "plugins": [
-      "prettier",
-      "react"
+      "prettier"
     ],
     "parserOptions": {
       "ecmaVersion": 6,
